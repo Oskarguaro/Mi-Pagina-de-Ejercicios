@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios DOM</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <h1>EJERCICIOS PRÁCTICOS DEL DOM</h1>
+
+    <div id="main"> required
+        <div class="container-secciones">
+            <section id="seccion1">
+                <h2>Ejercicio 1: Menú Hamburguesa</h2>
+                <p>Para este primer ejercicio vamos a diseñar el contenido HTML de nuestra página web de ejercicios del DOM y convertir su contenido en un menú hamburguesa "dinámico" para su fácil navegación. El cual estará disponible en pantallas inferiores a 1024 pixeles, te invito a usar el inspector de tu navegador y comprobarlo o abre esta página desde tu celular y lo veras.</p>
+                <img class="img-personal" src="imagenes/YHWH-19.png" alt="Su Nombre">
+                <p class="p-centrado"><b>Toda la Honra y la Gloria sean para YHWH Zevaot (YHWH de los Ejércitos)</b>.</p>
+            </section>
+    
+            <section id="seccion2">
+                <h2>Ejercicio 2: Reloj Digital y Alarma Sonora</h2>
+                <p>Para este ejercicio se elaborará un reloj digital que se mostrará en pantalla cuando lo indiquemos y se ocultará cuando lo indiquemos. De igual forma tendremos una alarma sonora que se activará al pulsar el botón correspondiente y se cancelará con otro botón.</p>
+                <div class="reloj"></div>
+                <div class="btns-reloj">
+                    <button id="iniciar-reloj">Iniciar Reloj</button>
+                    <button id="detener-reloj" disabled>Detener Reloj</button>
+                    <button id="iniciar-alarma">Iniciar Alarma</button>
+                    <button id="detener-alarma" disabled>Detener Alarma</button>
+                </div>
+                <img class="img-personal" src="imagenes/Reloj-arena.png" alt="Reloj de Arena">
+                <p class="p-centrado">El Eterno YHWH creo el tiempo y el espacio en el que vivimos y por su compasión vivimos y respiramos.</p>
+                <p class="p-centrado"><b>¡Bendito y Exaltado sea Su Nombre por siempre. Omen!</b></p>
+            </section>
+    
+            <section id="seccion3">
+                <h2>Ejercicio 3: Eventos del Teclado</h2>
+                <p>En este ejercicio se trabajarán los eventos del teclado para desencadenar una aplicación que mueva un elemento circular sobre un plano negro usando las flechas de desplazamiento del teclado; Izquierda (⬅), arriba (⬆), derecha (➡) y abajo (⬇).</p>
+                <p>Si presionas las teclas "Alt + A" accederás a un mensaje de alerta, si presionas "Alt + C" accederás a una ventana de confirmación y si presionas "Alt + P" saldrá una ventana tipo prompt para ingresar un valor.</p>
+                <img class="img-personal" src="imagenes/rios.jpg" alt="Rios-Dinamismo">
+                <p class="p-centrado">El movimiento es imprescindible para la vida y el Eterno nos hizo para ser seres dinámicos y activos, gozando de sus bendiciones en santidad y justicia.</p>
+            </section>
+    
+            <section id="seccion4">
+                <h2>Ejercicio 4: Cuenta Regresiva</h2>
+                <p>En este ejercicio elaboraremos una cuenta regresiva que nos recuerde un evento importante de nuestras vidas, actualiza la página y velo por ti mismo.</p>
+                <form id="form-date">
+                    <input type="date" name="fecha" placeholder="fecha" required>
+                    <input type="time" name="hora" placeholder="hora" required>
+                    <br>
+                    <textarea cols="60" rows="3" placeholder="Nombre del Evento" required></textarea>
+                    <br>
+                    <button type="submit" class="conteo-btn">Empezar Conteo</button>
+                </form>
+                <div class="temporizador"></div>
+                <button class="conteo-off-btn is-off"></button>
+                <img class="img-personal" src="imagenes/Shabbat.jpg" alt="Pan, Vino y Velas de Shabbat">
+                <p class="p-centrado">El Shabbat y las fiestas son un mandamiento, una señal y un pacto de nuestro Elohim YHWH con su pueblo escogido, son días muy especiales para compartir y bendecir, además conmemoramos las grandes obras de nuestro Abba al haber creado todo lo que conocemos y damos Gloria a Su Nombre y decimos "Todah Raba Abba Kadosh".</p>
+            </section>
+    
+            <section id="seccion5">
+                <h2>Ejercicio 5: Botón Scroll Arriba</h2>
+                <p>Para este ejercicio elaboraremos un botón que detecte cuando nos hayamos desplazado hacia bajo en la ventana de navegación y nos permita regresar al inicio al pulsarlo.</p>
+                <p>Pulse el botón <span class="btn_ejemplo">^</span>, ubicado en la parte inferior izquierda de la ventana junto al botón de temas, para regresar al inicio.</p>
+                <img class="img-personal" src="imagenes/regresar.png" alt="regresar">
+                <p class="p-centrado">En Su Torah el Eterno siempre nos invita a retornar al buen camino, a volvernos a Él, a iniciar una nueva vida alejada del pecado y cumpliendo Su Torah con todo nuestro 💖, con toda nuestra alma y con todas nuestras 💪; lo cual es nuestro culto racional y con un verdadero propósito.</p>
+                <p class="p-centrado"><b>¡Exaltado sea el Abba Kadosh (Padre Santo)!</b></p>
+            </section>
+    
+            <section id="seccion6">
+                <h2>Ejercicio 6: Botón Temas</h2>
+                <p>En este ejercicio vamos a crear un botón que nos permita alternar entre un tema claro y uno oscuro, lo cual es muy usado por los usurios hoy en día. Aplicando los métodos ya conocidos para modificar, agregar y remover atributos y preopiedades CSS desde el archivo JavaScript.</p>
+                <p>Para Cambiar el tema presione en el botón <span class="btn-ejem-tema">🌙</span> ubicado en la parte inferior izquierda para probar esta ingeniosa herramienta y cambiar el tema claro por un tema oscuro.</p>
+                <img class="img-personal" src="imagenes/diaynoche.jpg" alt="dia y noche">
+                <p class="p-centrado">El Eterno en su eterna Sabiduría y Compasión hizo las dos grandes lumbreras del cielo, el ☀️ para que señoreará el día y la 🌙 para que señoreará la noche demostrando Su gran Poder y Gloria, <b>¡HalleluYah!</b>.</p>
+            </section>
+    
+            <section id="seccion7">
+                <h2>Ejercicio 7: Local Storage</h2>
+                <p>Este ejercicio esta relacionado con el ejercicio anterior y lo que busca es permitir al usuario conservar el tema de mayor agrado para posteriores visitas a nuestro sitio web, mejorando su experiencia y estableciendo parámetros definidos por él. Para este fin haremos uso de la herramienta Local Storage de windows que permite almacenar variables en el navegador y ser invocadas cuando estas se requieran. Siempre y cuando se haga la conexión desde el mismo dispositivo.</p>
+                <p>Presiona el botón <span class="btn-ejem-tema">🌙</span> y seguidamente actualiza <span class="btn-ejem-actualizar-cerrar">🔄</span> el navegador o cierra la ventana <span class="btn-ejem-actualizar-cerrar">❌</span> y vuelve a abrirla y notarás que los cambios realizados en el tema se conservan de acuerdo a la última visita.</p>
+                <img class="img-personal" src="imagenes/almacenamiento.png" alt="almacenamiento">
+                <p class="p-centrado">En las Escrituras dice: <i>"ante toda cosa guardada, guarda tu corazón, porque de él mana la Vida"</i>. Es decir, si retenemos y conservamos las enseñanzas de la Torah (Instrucción de vida) en nuestras mentes y nuestros corazones seremos verdaderamente sabios y conoceremos (tener comunión íntima) al Elohim de Israel.</p>
+                <p class="p-centrado"><b>¡YHWH es Su Nombre!</b></p>
+            </section>
+    
+            <section id="seccion8">
+                <h2>Ejercicio 8: Reponsive con JavaScript</h2>
+                <p>Para este ejercicio debemos usar el modo responsive para que el contenido de el video y el mapa de abajo se visualicen en iframes y a partir de resoluciones menores a 600 pixeles se visualicen en forma de anclas o links con el fin de garantizar una interfaz mas simple y que ahorre en consumo de datos.</p>
+                <div class="contenedor-iframe">
+                    <!-- <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8pHbeD00iuU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen SameSite="none"></iframe> -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254510.12228125503!2d-74.09271167962457!3d4.643835213435107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bfd2da6cb29%3A0x239d635520a33914!2zQm9nb3TDoQ!5e0!3m2!1ses-419!2sco!4v1650057478760!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <img class="img-personal" src="imagenes/responsive-design.png" alt="responsive design">
+                <p class="p-centrado">No importa de que pueblo seamos, todos debemos llevar la <b>TORAH</b> en nuestros corazones.</p>
+            </section>
+    
+            <section id="seccion9">
+                <h2>Ejercicio 9: Responsive Tester</h2>
+                <p>En este ejercicio abriremos una ventana con la altura y el ancho indicados por el usuario para realizar una prueba responsive de una determinada página web</p>
+                <p class="p-centrado"><b>Complete los campos requeridos para abrir una nueva ventana con los valores indicados</b></p>
+                <form id="formulario" action="#">
+                    <input name="url" type="url" placeholder="Ingrese una URL" required>
+                    <input name="alto" type="number" placeholder="Especifique una Altura" required>
+                    <input name="ancho" type="number" placeholder="Especifique un Ancho" required>
+                    <div class="btn-test">
+                        <button id="btn_abrir_test" type="submit" name="abrir">Probar</button>
+                        <button id="btn_cerrar_test" type="reset">Cerrar</button>
+                    </div>
+                </form>
+                <img class="img-personal" src="imagenes/Torah.png" alt="Torah">
+                <p class="p-centrado"><i>"Porque no es justo delante de Elohim quien oye la Torah, sino aquel que oyéndola la lleva por obra"</i></p>
+            </section>
+    
+            <section id="seccion10">
+                <h2>Ejercicio 10: Detección de Dispositivos (User Agent)</h2>
+                <p>En este ejercicio más que un reto es conocer y explorar el objeto navigator de window ya que en este encontramos información muy importante sobre el dispositivo del cual se conecta nuestro usuario.</p>
+                <div id="lista-user-agent"></div>
+                <img class="img-personal" src="imagenes/origen.jpg" alt="origen">
+                <p class="p-centrado">El origen, ¿de dónde venimos y hacia dónde vamos? es importante saberlo y como dice el proverbio, <br><i><b>"EL fin de todo discurso es este; Teme a Elohim YHWH y guarda Su Torah, porque esto es el TODO del hombre"</b></i></p>
+            </section>
+    
+            <section id="seccion11">
+                <h2>Ejercicio 11: Detección de la Conexión</h2>
+                <p>En este ejercicio la finalidad es programar un mensaje que aparezca cuando se pierda la conexión a internet y otro mensaje cuando se restablezca la conexión para mantener informado al usuario de su estado de conexión.</p>
+                <img class="img-personal" src="imagenes/creacion.jpg" alt="Creación">
+                <p class="p-centrado">La Torah dice: "El Poder invisible de nuestro Elohim, se hace claramente visible en su creación", entonces busquemos con todo nuestro corazón, alma y ser, tener comunión con Él para tener bendeción de Su parte.</p>
+            </section>
+    
+            <section id="seccion12">
+                <h2>Ejercicio 12: Detección de Cámara Web</h2>
+                <p>Para este ejercicio se usará el objeto navigator con su propiedad mediaDevices para detectar dispositivos de audio y video conectados al PC y por medio del método getUserMedia capturar la salida de dichos dispositivos en la ventana del navegador, similar a lo que hacen las aplicaciones de Teams, Zoom y Meet.</p>
+                <div class="btns-video">
+                    <button id="iniciar-cam">Iniciar Cámara</button>
+                    <button id="detener-cam" disabled>Detener Cámara</button>
+                </div>
+                <img class="img-personal" src="imagenes/libros.jpg" alt="Libros">
+                <p class="p-centrado">El día que el Eterno decida juzgar a todas las naciones, se abrirán los libros de los Cielos y en ellos estarán grabadas todas las obras que hicimos en vida, será como ver una película de nuestras vidas y no habrá justificación alguna para ocultar las injusticias y será manifiesta la Justicia Verdadera de nuestro Creador <b>YHWH</b>.</p>
+            </section>
+    
+            <section id="seccion13">
+                <h2>Ejercicio 13: Geolocalización</h2>
+                <p>En este ejercicio usaremos la propiedad y métodos de geolocation para poder acceder a la ubicación de tu dispositivo por lo cual debes permitir a esta página acceder a dicha información cuando te lo pida 😊.</p>
+                <img class="img-personal" src="imagenes/Elohim.jpg" alt="Elohim">
+                <p class="p-centrado">¿Por qué "Elohim"?, la Naturaleza Divina del Eterno esta basada en atributos (Elohim) entre los cuales podemos mencionar Su Omniprescencia (Su Presencia esta en todos lados), Su Omnisciencia (Conocimiento Absoluto; Todo lo sabe) y Su Omnipotencia (Poder Absoluto; Tiene todo el Poder).<br><b>A Él sea toda la Honra, toda la Gloria y todo el Poder por la eternidad ¡omén!.</b></p>
+            </section>
+    
+            <section id="seccion14">
+                <h2>Ejercicio 14: Filtros de Búsqueda</h2>
+                <p>En este ejercicio se pretende programar una función de búsqueda que permita filtrar las tarjetas de acuerdo al texto contenido en cada una de ellas. Se usará una etiqueta input para capturar el valor a buscar.</p>
+                <p class="p-centrado"><b>Ingrese el texto a buscar</b></p>
+                <input type="search" name="buscar" placeholder="Buscar...">
+                <div class="container-cards">
+                    <figure class="card">
+                        <img src="https://placeimg.com/200/200/tech" alt="Tech">
+                        <figcaption>Tecnología</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="https://placeimg.com/200/200/animals" alt="Animals">
+                        <figcaption>Animales</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="https://placeimg.com/200/200/people" alt="People">
+                        <figcaption>Personas</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="https://placeimg.com/200/200/arch" alt="Arch">
+                        <figcaption>Arquitectura</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="https://placeimg.com/200/200/nature" alt="Nature">
+                        <figcaption>Naturaleza</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="https://placeimg.com/200/200/any" alt="Any">
+                        <figcaption>Aleatorio</figcaption>
+                    </figure>
+                </div>
+                <img class="img-personal" src="imagenes/busqueda.png" alt="Búsqueda">
+                <p class="p-centrado">Buscar es algo muy importante, porque es la forma como manifestamos sin palabras el interés o la importancia que algo representa y la Torah no es ajena a este principio y por eso esta escrito: <i>"El que busca encuentra"</i>.</p>
+            </section>
+    
+            <section id="seccion15">
+                <h2>Ejercicio 15: Sorteo Digital</h2>
+                <p>El siguiente ejercicio tiene como finalidad realizar un sorteo y elegir un ganador al azar de la siguiente lista. Para empezar haz click en el botón obtener ganador para realizar el sorteo y ver quién es el feliz ganador.</p>
+                <ol class="nominados">
+                    <li class="opcion">JavaScript</li>
+                    <li class="opcion">PHP</li>
+                    <li class="opcion">JAVA</li>
+                    <li class="opcion">C</li>
+                    <li class="opcion">Phyton</li>
+                    <li class="opcion">Ruby</li>
+                    <li class="opcion">Go</li>
+                    <li class="opcion">Visual Basic</li>
+                    <li class="opcion">Rust</li>
+                    <li class="opcion">Perl</li>
+                </ol>
+                <button class="btn-sorteo">Obtener Ganador</button>
+                <div class="msg-ganador"></div>
+                <img class="img-personal" src="imagenes/dados.jpg" alt="Dados">
+                <p class="p-centrado">En la Torah se le denomina <i>"echar suertes"</i>, y el Eterno permitió su uso en momentos muy específicos, como por ejemplo al momento de repartir la tierra prometida entre las 12 tribus de Israel, ya que ellos no podían dudar que el Eterno era quien decidía a través de los "sorteos" cuál era la heredad para cada casa. Sin embargo el hombre ha empleado los "sorteos" con otros fines que no son agradables a los ojos del Elohim Todopoderoso de Israel. Su práctica sólo esta determinada cuando es voluntad del Abba (Padre).</p>
+            </section>
+    
+            <section id="seccion16">
+                <h2>Ejercicio 16: Responsive Slider</h2>
+                <p>En este ejercicio el reto es programar una función que genere un carrusel de elementos el cual a su vez debe ser responsive para que se adapte a distintos tipos de pantallas según el dispositivo que uses.</p>
+                <div class="slider">
+                    <p class="pag z-slider"><b>El camino</b><br><br>Desde el principio el Eterno quizo que lo buscaramos y que siguieramos el buen camino y que no fueramos en pos de nuestros propios pensamientos y caminos, porque no existe luz fuera de Él y es imposible hayar sabiduría y entendimiento si no le reconocemos como nuestro Elohim Creador, Redentor y Salvador.</p>
+                    <img src="imagenes/camino.jfif" alt="Camino" class="pag">
+                    <p class="pag"><b>La Montaña</b><br><br>El Eterno es nuestra montaña, nuestro refugio y la roca donde nos sustentamos. Los montes le pertencen y fue en el monte Sinaí que nos dió su Torah, la cual es lumbrera a nuestros pies y lámpara en el camino.</p>
+                    <img src="imagenes/montaña.jpg" alt="Montaña" class="pag">
+                    <p class="pag"><b>El Bosque</b><br><br>El bosque representa el flujo de la vida y la energía que el Eterno en su infinita sabiduría controla y mantiene en constante ciclo, es por esto que cada momento de nuestras vidas es considerado un milagro y una maravilla hecha por Sus Benditas Manos.</p>
+                    <img src="imagenes/bosque.jpg" alt="Bosque" class="pag">
+                    <button class="btn-av">&raquo;</button>
+                    <button class="btn-re">&laquo;</button>
+                </div>
+                <img src="imagenes/causa-efecto.jpg" alt="Causa y Efecto" class="img-personal">
+                <p class="p-centrado">La Torah nos enseña, <i>"Buscad primeramente el Reino de los Cielos y todo lo demás vendrá por añadidura"</i>, por lo cual debemos buscar sabiduría para vivir rectamente y la sabiduría traerá frutos terrenales que no esperábamos.</p>
+            </section>
+    
+            <section id="seccion17">
+                <h2>Ejercicio 17: Scroll Spy</h2>
+                <p>Con este ejercicio buscamos hacer aun más amigable el entorno de nuestra página web usando un menú responsivo, para el caso de pantallas con tamaños superiores a los 1024 pixeles el menú estará ubicado a la derecha de la ventana con la función del scroll espía que permite al usuario visualizar en qué área de la página se encuentra y con links de acceso directo a cada apartado. Para el caso de pantallas con un tamaño menor a 1024 pixeles se seguirá empleando nuestro querido 😊 menú hamburguesa. ¡Ahora, ¿qué esperas?! usa el inspector de tu navegador para cambiar el tamaño de la pantalla y pruébalo por ti mismo.</p>
+                <img class="img-personal" src="imagenes/corazon.jpg" alt="Escudriña mi corazón">
+                <p class="p-centrado">El Eterno en su Palabra nos enseña que uno de sus atributos es ser Omnisciente, es decir, que todo lo sabe y nada le hes oculto, ni aún nuestro corazón y por eso debemos ser sinceros al acercarnos a Él porque el conoce las intenciones del corazón.</p>
+            </section>
+    
+            <section id="seccion18">
+                <h2>Ejercicio 18: Video Inteligente</h2>
+                <p>Para este ejercicio aplicaremos el spy-scroll para detectar cuando la ventana tenga en su foco el 100% del video y este se reproducirá automáticamente y cuando salga del foco se pausará. Prueba a continuación que el concepto de video inteligente es una gran herramienta que facilita la interacción del usuario con la página web.</p>
+                <h3>Taz el perro más "feo" 😊🐶</h3>
+                <video class="video-spy" src="videos/taz.mp4" muted controls></video>
+                <h3>Hallel: Exaltar a Elohim (Kehila Gozo y Paz)</h3>
+                <video class="video-spy" src="videos/Exaltar a Elohim  Yom Sheva  Kehila Mesiánica Gozo y Paz_360p.mp4" muted controls></video>
+                <img src="imagenes/plenitud.jpg" alt="" class="img-personal">
+                <p class="p-centrado">Es importante tener plenitud en nuestras vidas, esto significa tener completa comunión con <b>YHWH</b> nuestro Elohim.</p>
+            </section>
+    
+            <section id="seccion19">
+                <h2>Ejercicio 19: Formulario de Contacto (Validaciones)</h2>
+                <p>En este ejercicio validaremos la información ingresada en los campos del formulario y usaremos los conceptos de las expresiones regulares y aprovecharemos al máximo los atributos de las etiquetas de los formularios, tales como el atributo "pattern" para ingresar expresiones regulares que se validaran desde el css con las propiedades de estas etiquetas de HMTL5.</p>
+                <h3>Envíanos tus comentarios</h3>
+                <form id="form-contacto" action="#">
+                    <input class="input-dato" name="Nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="El Nombre sólo admite letras y espacios" type="text" placeholder="Ingrese su nombre" required>
+                    <input class="input-dato" name="E-mail" pattern="\b(\w+@\w+)(\.\w{2,10})\b" title="Ingresa un email válido. Eje: ejemplo@ejemplo.ejem" type="email" placeholder="Ingrese su e-mail" required>
+                    <input class="input-dato" name="Asunto" title="Ingrese un asunto válido" type="text" placeholder="Ingrese el asunto" required>
+                    <textarea class="input-dato caja-comentario" name="Comentario" data-pattern="^.{1,255}$" title="El comentario no debe exceder los 255 caracteres" type="text" rows="10" cols="50" placeholder="Ingrese su comentario" required></textarea>
+                    <input class="contacto-btn" type="submit">
+                    <div class="form-loader-black is-off">
+                        <img src="assets/oval black.svg" alt="loader black">
+                    </div>
+                    <div class="form-loader-light is-off">
+                        <img src="assets/oval light.svg" alt="loader light">
+                    </div>
+                    <div class="form-response is-off">
+                        <p>Se enviaron los datos satisfactoriamente</p>
+                    </div>
+                </form>
+                <img src="imagenes/validacion.jpg" alt="validar" class="img-personal">
+                <p class="p-centrado">Para tener crecimiento espiritual es necesario estar constantemente autoevaluándonos por medio de la Torah que es nuestra instrucción de vida, y esforzarnos de corazón en corregir los errores que encontremos en nosotros, esta es la parte más difícil del proceso porque el orgullo siempre estará buscando la forma de ocultar nuestras fallas.</p>
+            </section>
+
+            <!-- <section id="seccion19">
+                <h2>Ejercicio 19: Formulario de Contacto (Validaciones)</h2>
+                <p>En este ejercicio validaremos la información ingresada en los campos del formulario y usaremos los conceptos de las expresiones regulares y algunos atributos de las etiquetas de los formularios. Usaremos además validaciones usando los condicionales "if" y "else" de JavaScript.</p>
+                <h3>Envíanos tus comentarios</h3>
+                <form id="form-contacto" action="#">
+                    <input class="input-dato" name="Nombre" type="text" placeholder="Ingrese su nombre" required>
+                    <input class="input-dato" name="E-mail" type="email" placeholder="Ingrese su e-mail" required>
+                    <input class="input-dato" name="Asunto" type="text" placeholder="Ingrese el asunto" required>
+                    <textarea class="input-dato caja-comentario" name="Comentario" type="text" rows="10" cols="50" placeholder="Ingrese su comentario" required></textarea>
+                    <input class="contacto-btn" type="submit">
+                </form>
+                <img src="imagenes/validacion.jpg" alt="" class="img-personal">
+                <p class="p-centrado">Para tener crecimiento espiritual es necesario estar constantemente autoevaluándonos por medio de la Torah que es nuestra instrucción de vida, y esforzarnos de corazón en corregir los errores que encontremos en nosotros.</p>
+            </section> -->
+    
+            <section id="seccion20">
+                <h2>Ejercicio 20: Narrador</h2>
+                <p>En este último ejercicio haremos uso de la API del reconocimiento de voz, específicamente el speechSynthesis con el cual podemos indicarle al sistema que lea un texto indicado, ingresa un texto en el cuadro de abajo y pruébalo.</p>
+                <form id="form-rec-voz">
+                    <select name="select-voz"></select>
+                    <textarea name="texto" id="" cols="30" rows="10" title="Ingresa un texto para que el narrador lo lea" required></textarea>
+                    <button class="btn-rec-voz">Leer Texto</button>
+                </form>
+                <img src="imagenes/voz.jpg" alt="Voz del corazón" class="img-personal">
+                <p class="p-centrado">El Eterno prometió escribir su Torah en nuestros corazones y es por medio de ella que nos habla en su eterna compasión para dar luz a nuestras vidas, ese es su Pacto Renovado. <b>Omen ve Omen</b>.</p>
+                <br><br><br><br><br>
+            </section>
+        </div>
+       
+    
+        <button id="btn_temas">🌙</button>
+    
+        <button class="btn_scroll_top ocultar">^</button>
+    
+        <button class="btn-menu hamburger hamburger--spin">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+    </div>
+
+
+
+    <script src="js/index.js" type="module"></script>
+</body>
+</html>

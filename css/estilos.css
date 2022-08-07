@@ -1,0 +1,767 @@
+/* Atributos de la ventana principal */
+:root {
+  --main-color: gold;
+  --second-color: black;
+  --my-color: rgb(151, 248, 39);
+  --back-color: rgba(0, 0, 0, 0.83);
+  --color-correcto: rgb(2, 180, 2);
+  --color-incorrecto: rgb(252, 72, 17);
+}
+
+html {
+  box-sizing: border-box;
+  font-family: system-ui;
+  font-size: 20px;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1 {
+  background-color: var(--main-color);
+  color: var(--second-color);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+h2 {
+  text-align: center;
+  /* Con esto aseguramos que la posición fija del título principal no tape el título de la sección */
+  padding-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+section {
+  margin-top: 10px;
+  min-height: 800px;
+}
+
+.img-personal {
+  display: block;
+  margin: 50px auto;
+  max-height: 400px;
+  max-width: 100%;
+}
+
+p {
+  margin: 5px 100px;
+  text-align: justify;
+}
+
+.p-centrado {
+  text-align: center;
+  margin: 5px 100px;
+}
+
+button {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+input {
+  width: 300px;
+  font-size: 16px;
+}
+
+/* ******************** Botón Hamburguesa ******************** */
+.btn-menu {
+  position: fixed;
+  bottom: 1rem;
+  right: 1.5rem;
+  z-index: 100;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+
+.btn-menu * {
+  margin: 0px;
+}
+
+/* ******************** Menú Dinámico ******************** */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  background-color: var(--back-color);
+  overflow-y: scroll;
+  opacity: 0;
+  transform: translate(-100%, 0);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.is-active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* .mostrar {
+  animation-name: mostrarMenu;
+  animation-duration: 100ms;
+  animation-fill-mode: forwards;
+} */
+
+.container-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.link-menu {
+  text-align: center;
+  margin: 15px 0px;
+  width: 100%;
+}
+
+.a-link {
+  color: var(--main-color);
+  font-size: 30px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  /* Con all hacemos que todas las propiedades al cambiar a hover lo hagan fluidamente */
+  transition: all 0.3s ease;
+}
+
+.a-link:hover {
+  background-color: var(--main-color);
+  color: var(--second-color);
+}
+
+/* ******************** Reloj Digital ******************** */
+.reloj {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.btns-reloj {
+  text-align: center;
+}
+
+/* ******************** Eventos del Teclado ******************** */
+.plano {
+  display: flex;
+  background-color: var(--second-color);
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+  max-width: 900px;
+}
+
+.plano figure {
+  margin: auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--my-color);
+  /* transition: transform 0.3s ease; */
+}
+
+/* ******************** Cuenta Regresiva ******************** */
+
+#form-date {
+  text-align: center;
+  margin: 20px;
+}
+
+#form-date input {
+  width: 220px;
+  margin-bottom: 20px;
+  font-family: inherit;
+}
+
+#form-date textarea {
+  resize: none;
+  font-family: inherit;
+}
+
+.temporizador {
+  font-size: 25px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.conteo-off-btn {
+  display: block;
+  margin: 20px auto;
+}
+
+.mensaje {
+  margin-top: 80px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  animation-name: textoFiesta;
+  animation-duration: 4s;
+}
+
+@keyframes textoFiesta {
+  from {
+    font-size: 50px;
+  }
+
+  25% {
+    font-size: 100px;
+  }
+
+  50% {
+    font-size: 50px;
+  }
+
+  75% {
+    font-size: 100px;
+  }
+
+  to {
+    font-size: 50px;
+  }
+}
+
+/* ******************** Botón Volver Arriba ******************** */
+.btn_scroll_top {
+  background-color: var(--main-color);
+  position: fixed;
+  bottom: 1rem;
+  right: calc(4.7rem + 1.5rem);
+  height: 70px;
+  width: 70px;
+  border: 0;
+  border-radius: 50%;
+  z-index: 100;
+  font-size: 40px;
+  font-weight: bold;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.ocultar {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.btn_scroll_top:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.btn_ejemplo {
+  background-color: var(--main-color);
+  color: var(--second-color);
+  padding: 5px 10px;
+  border: 0;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* ******************** Botón Tema Oscuro/Día ******************** */
+#btn_temas {
+  background-color: var(--second-color);
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  height: 70px;
+  width: 70px;
+  border: 0;
+  border-radius: 50%;
+  z-index: 100;
+  font-size: 40px;
+  font-weight: bold;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+#btn_temas:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.btn-ejem-tema {
+  background-color: var(--second-color);
+  color: var(--second-color);
+  padding: 5px;
+  border: 0;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* ******************** Local Storage ******************** */
+.btn-ejem-actualizar-cerrar {
+  font-size: 30px;
+}
+
+/* ******************** Responsive JavaScript ******************** */
+.contenedor-iframe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.contenedor-iframe iframe {
+  margin-top: 2rem;
+  border: 1px solid var(--main-color);
+  border-radius: 3px;
+}
+
+.contenedor-iframe a {
+  margin-top: 5px;
+  text-decoration: none;
+}
+
+/* ******************** Responsive Tester ******************** */
+#formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-test {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* ******************** User Agent ******************** */
+#lista-user-agent {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 3rem;
+  align-items: center;
+}
+
+/* ******************** Detección de conexión ******************** */
+.online {
+  background-color: rgb(11, 199, 11);
+  color: var(--second-color);
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  position: fixed;
+  top: -15%;
+  z-index: 11;
+  width: 100%;
+  padding: 20px;
+  animation-name: conexion;
+  animation-duration: 4s;
+}
+
+.offline {
+  background-color: red;
+  color: var(--second-color);
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  position: fixed;
+  top: -15%;
+  z-index: 11;
+  width: 100%;
+  padding: 20px;
+  animation-name: conexion;
+  animation-duration: 4s;
+}
+
+@keyframes conexion {
+  from {
+    top: -15%;
+  }
+
+  10% {
+    top: 0;
+  }
+
+  90% {
+    top: 0;
+  }
+
+  to {
+    top: -15%;
+  }
+}
+
+/* ******************** User Agent ******************** */
+.p-conexion {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.img-conexion {
+  margin: 0px auto !important;
+  max-height: 600px !important;
+}
+
+/* ******************** Detección Cámara ******************** */
+.video-cam {
+  display: block;
+  margin: auto auto;
+  margin-top: 60px;
+  width: 60%;
+}
+
+.btns-video {
+  text-align: center;
+}
+
+/* ******************** User Agent ******************** */
+#seccion13 a {
+  display: block;
+  margin: auto;
+  width: max-content;
+}
+
+/* ******************** Filtros de Búsqueda ******************** */
+#seccion14 input {
+  display: flex;
+  margin: 20px auto;
+}
+
+.container-cards {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: var(--main-color);
+  margin: 10px 5px;
+  width: 290px;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card figcaption {
+  color: var(--second-color);
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ******************** Sorteo Digital ******************** */
+.nominados {
+  text-align: center;
+  width: max-content;
+  margin: auto;
+  padding: 10px 5px 10px 25px;
+}
+
+.btn-sorteo {
+  display: block;
+  margin: 15px auto;
+}
+
+.anuncio {
+  text-align: center;
+  font-size: 25px;
+  margin: 30px;
+}
+
+.ganador {
+  text-align: center;
+  font-size: 0;
+  font-weight: 900;
+  font-family: Simply Rounded;
+  animation-name: text-ganador;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  text-shadow: 0 0 15px rgb(9, 255, 0);
+  -webkit-text-stroke: 2px rgb(9, 255, 0);
+}
+
+@keyframes text-ganador {
+  from {
+    font-size: 0px;
+    transform: rotate(360deg);
+  }
+  
+  20% {
+    font-size: 150px;
+    transform: rotate(0deg);
+  }
+
+  40% {
+    font-size: 50px;
+  }
+
+  60% {
+    font-size: 150px;
+  }
+
+  80% {
+    font-size: 50px;
+  }
+
+  to {
+    font-size: 150px;
+  }
+}
+
+/* ******************** Responsive Slider ******************** */
+:root {
+  --altura-slider: 400px;
+  --color-hover: rgba(31, 31, 31, 0.568);
+}
+
+.slider {
+  position: relative;
+  height: var(--altura-slider);
+  max-width: 800px;
+  margin: 20px auto;
+  margin-top: 4rem;
+}
+
+.pag {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* background-color: white; */
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  text-align: center;
+  transition: opacity .5s ease;
+}
+
+.z-slider {
+  z-index: 1;
+  opacity: 1;
+}
+
+.btn-av,
+.btn-re {
+  position: absolute;
+  background-color: beige;
+  height: 60px;
+  width: 60px;
+  border: 0;
+  border-radius: 50%;
+  z-index: 9;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.btn-re{
+  top: calc((var(--altura-slider) / 2) - 30px);
+  left: 5px;
+}
+
+.btn-av {
+  top: calc((var(--altura-slider) / 2) - 30px);
+  right: 5px;
+}
+
+.btn-av:hover,
+.btn-re:hover {
+  color: var(--color-hover);
+}
+
+.btn-av:active,
+.btn-re:active {
+  opacity: 0.5;
+}
+
+/* ******************** Scroll Spy ******************** */
+.is-off {
+  display: none;
+}
+
+#main {
+  display: flex;
+}
+
+.container-secciones {
+  flex: 1 1 80%;
+}
+
+#menu-scroll-spy {
+  position: sticky;
+  top: 74px;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  background-color: var(--second-color);
+  display: grid;
+  flex: 1 1 20%;
+  height: calc(100vh - 76px);
+  text-align: end;
+  overflow-y: scroll;
+}
+
+#menu-scroll-spy a {
+  color: var(--main-color);
+  text-decoration: none;
+  padding: 20px 10px;
+  transition: all 0.3s ease;
+}
+
+#menu-scroll-spy a:hover {
+  color: var(--second-color);
+  background-color: var(--main-color);
+  font-weight: bold;
+}
+
+.btn_scroll_top_spy {
+  background-color: var(--main-color);
+  position: fixed;
+  bottom: 1rem;
+  left: calc(3rem + 2rem);
+  height: 70px;
+  width: 70px;
+  border: 0;
+  border-radius: 50%;
+  z-index: 100;
+  font-size: 40px;
+  font-weight: bold;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.btn_scroll_top_spy:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* ******************** Video Inteligente ******************** */
+.video-spy {
+  display: block;
+  margin: 20px auto 40px auto;
+}
+
+#seccion18 h3 {
+  text-align: center;
+}
+
+/* ******************** Formulario Contacto Validaciones ******************** */
+#seccion19 h3 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#form-contacto {
+  display: grid;
+  justify-content: center;
+}
+
+.input-dato {
+  font-family: inherit;
+  font-size: 18px;
+  color: var(--second-color);
+  width: 40vw;
+  padding: 8px;
+  margin: 20px 10px 0px 10px;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
+.caja-comentario {
+  resize: none;
+  font-family: inherit;
+  height: 200px;
+}
+
+.contacto-btn {
+  margin: 10px auto;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#form-contacto [required]:valid {
+  border: 2px solid var(--color-correcto);
+}
+
+#form-contacto [required]:invalid {
+  border: 2px solid var(--color-incorrecto);
+  border-radius: initial;
+}
+
+.mensaje-incorrecto {
+  font-size: 16px;
+  text-align: center;
+  background-color: rgb(252, 72, 17);
+  color: white;
+  width: 40vw;
+  padding: 8px;
+  margin: 0px 10px;
+  transition: all 500ms ease;
+}
+
+.mostrar-mensaje {
+  display: block;
+  animation: mostrar-mensaje 500ms 1 normal 0s ease;
+}
+
+@keyframes mostrar-mensaje {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.form-loader-black,
+.form-loader-light,
+.form-response p{
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 20px;
+}
+
+/* ******************** Narrador ******************** */
+
+#form-rec-voz {
+  display: grid;
+  justify-content: center;
+}
+
+#form-rec-voz * {
+  font-family: inherit;
+  font-size: 18px;
+  color: var(--second-color);
+  width: 40vw;
+  padding: 8px;
+  margin: 20px 10px 0px 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  resize: none;
+}
+
+.btn-rec-voz {
+  margin: 25px auto !important;
+  width: 10vw !important;
+  font-weight: bold;
+  cursor: pointer;
+}
