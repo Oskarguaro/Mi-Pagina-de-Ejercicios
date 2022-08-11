@@ -1,12 +1,14 @@
 
 //Variables generales
-const d = document;
+const d = document,
+    w = window;
     
 //Declarando variables "x" y "y" para mover el círculo
-let x = 0,
-y = 0;
 
 export function moverObjetoConTeclado(classEtiqueta) {
+    let x = 0,
+        y = 0;
+    
     //Creando etiquetas HTML dinamicas
     const $seccion3 = d.getElementById(classEtiqueta);
     
@@ -20,39 +22,62 @@ export function moverObjetoConTeclado(classEtiqueta) {
     $seccion3.children[2].before($divPlano);
     // console.log($seccion3.children[2]);
 
-    
-    //Delegando eventos a las teclas de desplazamiento para mover el objeto
+    //Creando scroll spy para desactivar comportamiento por default de las teclas
     d.addEventListener("keydown", (e) => {
-        //Declarando variables para detectar colisiones
-        const limCirculo = $circulo.getBoundingClientRect(),
-                limPlano = $divPlano.getBoundingClientRect()
-       
-        if(e.key === "ArrowLeft" && limCirculo.left > limPlano.left){
-            // console.log("Movimiento a la izquierda");
-            e.preventDefault();
-            x -= 6;
-            $circulo.style.transform = `translate(${x}px, ${y}px)`;
+        //Creando espía para el plano
+        let options = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 1,
         };
-        if(e.key === "ArrowRight" && limCirculo.right < limPlano.right){
-            // console.log("Movimiento a la derecha");
-            e.preventDefault();
-            x += 6;
-            $circulo.style.transform = `translate(${x}px, ${y}px)`;
+    
+        let observer = new IntersectionObserver(callback, options);
+    
+        observer.observe($divPlano);
+    
+        function callback(entrada){
+            if(entrada[0].isIntersecting === true) {
+                teclasMovimiento();
+            };
         };
-        if(e.key === "ArrowUp" && limCirculo.top > limPlano.top){
-            // console.log(limCirculo.top, limPlano.top);
-            // console.log("Movimiento arriba");
-            e.preventDefault();
-            y -= 6;
-            $circulo.style.transform = `translate(${x}px, ${y}px)`;
+    
+        //Delegando eventos a las teclas de desplazamiento para mover el objeto
+        function teclasMovimiento(){
+            //Declarando variables para detectar colisiones
+            const limCirculo = $circulo.getBoundingClientRect(),
+                    limPlano = $divPlano.getBoundingClientRect()
+           
+        
+            if(e.key === "ArrowLeft" && limCirculo.left > limPlano.left){
+                // console.log("Movimiento a la izquierda");
+                e.preventDefault();
+                x -= 6;
+                $circulo.style.transform = `translate(${x}px, ${y}px)`;
+            };
+        
+            if(e.key === "ArrowRight" && limCirculo.right < limPlano.right){
+                // console.log("Movimiento a la derecha");
+                e.preventDefault();
+                x += 6;
+                $circulo.style.transform = `translate(${x}px, ${y}px)`;
+            };
+            
+            if(e.key === "ArrowUp" && limCirculo.top > limPlano.top){
+                // console.log(limCirculo.top, limPlano.top);
+                // console.log("Movimiento arriba");
+                e.preventDefault();
+                y -= 6;
+                $circulo.style.transform = `translate(${x}px, ${y}px)`;
+            };
+        
+            if(e.key === "ArrowDown" && limCirculo.bottom < limPlano.bottom){
+                // console.log(limCirculo.bottom, limPlano.bottom);
+                // console.log("Movimiento abajo");
+                e.preventDefault();
+                y += 6;
+                $circulo.style.transform = `translate(${x}px, ${y}px)`;
+            };      
         };
-        if(e.key === "ArrowDown" && limCirculo.bottom < limPlano.bottom){
-            // console.log(limCirculo.bottom, limPlano.bottom);
-            // console.log("Movimiento abajo");
-            e.preventDefault();
-            y += 6;
-            $circulo.style.transform = `translate(${x}px, ${y}px)`;
-        };      
     });    
 };
 

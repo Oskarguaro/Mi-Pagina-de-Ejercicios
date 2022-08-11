@@ -557,6 +557,10 @@ input {
 .btn-re {
   position: absolute;
   background-color: beige;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 60px;
   width: 60px;
   border: 0;
