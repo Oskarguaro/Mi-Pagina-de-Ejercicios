@@ -22,9 +22,9 @@ html {
   margin: 0px;
 }
 
-body {
+/* body {
   overflow-x: hidden;
-}
+} */
 
 h1 {
   background-color: var(--main-color);
@@ -601,7 +601,7 @@ input {
 }
 
 .container-secciones {
-  flex: 1 1 80%;
+  flex: 1 1 100%;
 }
 
 #menu-scroll-spy {
