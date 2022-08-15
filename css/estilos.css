@@ -47,6 +47,7 @@ h2 {
 section {
   margin-top: 10px;
   min-height: 800px;
+  justify-content: center;
 }
 
 .img-personal {
@@ -597,11 +598,12 @@ input {
 
 #main {
   display: flex;
-  justify-content: center;
 }
 
 .container-secciones {
-  flex: 1 1 100%;
+  flex: 1 1 80%;
+  display: flex;
+  flex-direction: column;
 }
 
 #menu-scroll-spy {
@@ -769,4 +771,15 @@ input {
   min-width: 5vw !important;
   font-weight: bold;
   cursor: pointer;
+}
+
+/* ******************** Estilos Responsivos ******************** */
+@media (max-width: 1024px){
+  #main {
+    display: grid;
+  }
+
+  #seccion1 {
+    margin-top: 3rem;
+  }
 }
