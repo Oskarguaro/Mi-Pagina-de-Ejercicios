@@ -597,6 +597,7 @@ input {
 
 #main {
   display: flex;
+  justify-content: center;
 }
 
 .container-secciones {
@@ -676,9 +677,9 @@ input {
   font-family: inherit;
   font-size: 18px;
   color: var(--second-color);
-  width: 40vw;
+  min-width: 100%;
   padding: 8px;
-  margin: 20px 10px 0px 10px;
+  margin-top: 20px;
   border: 3px solid black;
   border-radius: 5px;
 }
@@ -755,9 +756,9 @@ input {
   font-family: inherit;
   font-size: 18px;
   color: var(--second-color);
-  width: 40vw;
+  min-width: 40vw;
   padding: 8px;
-  margin: 20px 10px 0px 10px;
+  margin-top: 20px;
   border: 2px solid black;
   border-radius: 5px;
   resize: none;
@@ -765,7 +766,7 @@ input {
 
 .btn-rec-voz {
   margin: 25px auto !important;
-  width: 10vw !important;
+  min-width: 5vw !important;
   font-weight: bold;
   cursor: pointer;
 }
